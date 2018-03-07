@@ -1,0 +1,19 @@
+<h1>Time to Eat</h1>
+
+<% if notice %>
+	<p><%= notice %></p>
+<% end %>
+
+<p>Let's find some food for you to eat...</p>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-1">
+		<div class="well">
+			<%= form_tag results_path do %>
+				<p><%= text_field_tag :term, nil, placeholder: "What are you hungry for?" %></p>
+				<p><%= text_field_tag :location, nil, placeholder: "Where are you located?" %></p>
+				<p><%= submit_tag "Feed me!", class: 'btn btn-success' %></p>
+			<% end %>
+		</div>
+	</div>
+</div>
